@@ -17,11 +17,15 @@ public class TriangleCheckerTest {
 		scaleneTriangle = scaleneTriangleChecker.checkTriangle(2,1,3);
 		assertEquals(TriangleType.SCALENE_TRIANGLE, scaleneTriangle);
 		
-		scaleneTriangle = scaleneTriangleChecker.checkTriangle(0,0,0);
+		scaleneTriangle = scaleneTriangleChecker.checkTriangle(0,1,1);
 		assertNotEquals(TriangleType.SCALENE_TRIANGLE, scaleneTriangle);
 		scaleneTriangle = scaleneTriangleChecker.checkTriangle(-1,0,0);
 		assertNotEquals(TriangleType.SCALENE_TRIANGLE, scaleneTriangle);
 		scaleneTriangle = scaleneTriangleChecker.checkTriangle(3,3,3);
+		assertNotEquals(TriangleType.SCALENE_TRIANGLE, scaleneTriangle);
+		scaleneTriangle = scaleneTriangleChecker.checkTriangle(3,2,3);
+		assertNotEquals(TriangleType.SCALENE_TRIANGLE, scaleneTriangle);
+		scaleneTriangle = scaleneTriangleChecker.checkTriangle(-1,2,3);
 		assertNotEquals(TriangleType.SCALENE_TRIANGLE, scaleneTriangle);
 	}
 	
@@ -42,6 +46,11 @@ public class TriangleCheckerTest {
 		assertNotEquals(TriangleType.ISOSCELES_TRIANGLE, isoscelesTriangle);
 		isoscelesTriangle = isoscelesTriangleChecker.checkTriangle(2,2,2);
 		assertNotEquals(TriangleType.ISOSCELES_TRIANGLE, isoscelesTriangle);
+		isoscelesTriangle = isoscelesTriangleChecker.checkTriangle(0,3,1);
+		assertNotEquals(TriangleType.ISOSCELES_TRIANGLE, isoscelesTriangle);
+		isoscelesTriangle = isoscelesTriangleChecker.checkTriangle(2,-1,2);
+		assertNotEquals(TriangleType.ISOSCELES_TRIANGLE, isoscelesTriangle);
+		
 	}
 	
 	public void checkEquilateralTriangleTest()
@@ -60,6 +69,8 @@ public class TriangleCheckerTest {
 		assertNotEquals(TriangleType.EQUILATERAL_TRIANGLE, equilateralTriangle);
 		equilateralTriangle = equilateralTriangleChecker.checkTriangle(1,2,0);
 		assertNotEquals(TriangleType.EQUILATERAL_TRIANGLE, equilateralTriangle);
+		equilateralTriangle = equilateralTriangleChecker.checkTriangle(-1,-1,-1);
+		assertNotEquals(TriangleType.EQUILATERAL_TRIANGLE, equilateralTriangle);
 	}
 	
 	public void checkNoTriangleTest()
@@ -67,7 +78,7 @@ public class TriangleCheckerTest {
 		TriangleChecker noTriangleChecker = new TriangleChecker();
 		TriangleType noTriangle = noTriangleChecker.checkTriangle(0,0,0);
 		assertEquals(TriangleType.NO_TRIANGLE, noTriangle);
-		noTriangle = noTriangleChecker.checkTriangle(0,1,0);
+		noTriangle = noTriangleChecker.checkTriangle(1,-1,3);
 		assertEquals(TriangleType.NO_TRIANGLE, noTriangle);
 		noTriangle = noTriangleChecker.checkTriangle(1,0,1);
 		assertEquals(TriangleType.NO_TRIANGLE, noTriangle);
