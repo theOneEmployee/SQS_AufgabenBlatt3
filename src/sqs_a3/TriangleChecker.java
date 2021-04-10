@@ -7,10 +7,10 @@ public class TriangleChecker {
 			return TriangleType.NO_TRIANGLE;
 		}
 		
-		//if(a + b >= c || a + c >= b || b + c >= a)
-		//{
-			//return TriangleType.NO_TRIANGLE;
-		//}
+		if(a + b <= c || a + c <= b || b + c <= a)
+		{
+			return TriangleType.NO_TRIANGLE;
+		}
 		
 		if(a != b && a != c && b != c) 
 		{
