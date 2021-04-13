@@ -4,6 +4,8 @@ import static org.junit.Assert.*;
 
 import org.junit.Test;
 
+
+//TriangleChecker.checkTriangle(Integer.MAX_VALUE, Integer.MAX_VALUE, Integer.MAX_VALUE)
 public class TriangleCheckerTest {
 
 	@Test
