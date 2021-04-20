@@ -24,4 +24,3 @@ public class TriangleChecker {
 		return TriangleType.NO_TRIANGLE;
 	}
 }
-

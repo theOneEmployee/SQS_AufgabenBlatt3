@@ -109,8 +109,7 @@ public class TriangleCheckerTest {
 		noTriangle = noTriangleChecker.checkTriangle(1,0,1);
 		assertEquals(TriangleType.NO_TRIANGLE, noTriangle);
 		noTriangle = noTriangleChecker.checkTriangle(1,1,2);
-		assertEquals(TriangleType.NO_TRIANGLE, noTriangle);
-		
+		assertEquals(TriangleType.NO_TRIANGLE, noTriangle);	
 	}
 	
 	@Test
