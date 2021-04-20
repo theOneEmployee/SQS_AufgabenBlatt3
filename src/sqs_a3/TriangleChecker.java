@@ -7,8 +7,7 @@ public class TriangleChecker {
 		{
 			return TriangleType.NO_TRIANGLE;
 		}
-		
-		if(a != b && a != c && b != c) 
+		else if(a != b && a != c && b != c) 
 		{
 			return TriangleType.SCALENE_TRIANGLE;
 		}
@@ -16,11 +15,7 @@ public class TriangleChecker {
 		{
 			return TriangleType.ISOSCELES_TRIANGLE;
 		}
-		else if(a == b && b == c)
-		{
-			return TriangleType.EQUILATERAL_TRIANGLE;
-		}
 		
-		return TriangleType.NO_TRIANGLE;
+		return TriangleType.EQUILATERAL_TRIANGLE;
 	}
 }

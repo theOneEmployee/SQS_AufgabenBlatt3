@@ -14,6 +14,13 @@ public class TriangleCheckerWhiteboxTests {
 	}
 	
 	@Test
+	public void checkNoTriangleTest()
+	{
+		TriangleType noTriangle = TriangleChecker.checkTriangle(-4, -2, -3);
+		assertEquals(TriangleType.NO_TRIANGLE, noTriangle);
+	}
+	
+	@Test
 	public void checkScaleneTriangleTest() {
 		TriangleType scaleneTriangle = TriangleChecker.checkTriangle(2, 3, 4);
 		assertEquals(TriangleType.SCALENE_TRIANGLE, scaleneTriangle);
