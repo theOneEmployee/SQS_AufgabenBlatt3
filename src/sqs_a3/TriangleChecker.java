@@ -1,6 +1,8 @@
 package sqs_a3;
 
 public class TriangleChecker {
+	private TriangleChecker() {};
+	
 	public static TriangleType checkTriangle(int a, int b, int c) {
 		
 		if((long)a + (long)b <= c || (long)a + (long)c <= b || (long)b + (long)c <= a)
